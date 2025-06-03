@@ -1,0 +1,89 @@
+#about-game .wrapper{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 88px;  
+    position: relative;
+}
+
+.hero-img{
+    width: clamp(50%,40vw,100%);
+    height: auto;
+    object-fit: contain;
+}
+
+.about-game-text{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2.5vw,48px);
+}
+
+.about-game-description{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px,0.9vw,18px);
+}
+
+.features-game{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(14px,2vw,40px);
+}
+
+.features-game-cards{
+    display: flex;
+    flex-direction: row;
+    gap: clamp(12px,1.6vw,32px);
+}
+
+.features-game-card{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(12px,1.2vw,22px);
+    background-color: #313131;
+    padding-top: clamp(12px,2vw,40px);
+    padding-bottom: clamp(12px,2vw,40px);
+    padding-left: clamp(14px,2.4vw,46px);
+    padding-right: clamp(14px,2.4vw,46px);
+    border-radius: clamp(8px,1.1vw,22px);
+}
+
+.features-game-card img{
+    width: clamp(50px,5vw,102px);
+    height: auto;
+}
+
+.features-game-card div{
+    text-align: center;
+    width: clamp(72px,6.5vw,124px);
+}
+
+.features-game-card:hover{
+    background-color: #222222;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+}
+
+@media(max-width: 1300px){
+    .about-game-text{
+        width: 70vw;
+    }
+
+    .hero-img{
+        width: 40vw;
+        height: auto;
+    }
+}
+
+@media(max-width: 850px){
+    .about-game-text{
+        width: 100vw;
+    }
+
+    .hero-img{
+        display: none;
+    }
+}

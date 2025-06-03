@@ -1,0 +1,43 @@
+from django.urls import path
+from .views import ScoringPointsView, EndGameCheck, ResetCardAndPlay,RequireDiscardToSettle, SendCourtCrusader, PlayerCountRelicsView, PlayerCrusadePointsView, StealCrusadePoints, CountRelicsView, CreateRoomView, JoinRoomView, PlayersInRoomView, RemovePlayerView, CheckSessionInRoomView, StartGameView, PlayersCount, RoomStatusView, CurrentPlayerView, AddCardToHandView, PlayerHandView, PlayerStatusView, EditPlayerStatusView, AddCardToPlayerPlayedCard, PlayedCardView, DeleteCardHandView, EditCurrentPlayerView, CureEpidemicView, LogicEpidemic, KillCourt, MovePeasantCard, MoveCard, ChoiseCardByGroupToMove, SwapCards, ChoiseCourtKill, CrusadePointsView, DeleteCardAndGetCrusadePoints
+from . import views
+
+urlpatterns = [
+    path('create/', CreateRoomView.as_view(), name='create-room'),
+    path('join/', JoinRoomView.as_view(), name='join-room'),
+    path('<str:room_code>/players/', PlayersInRoomView.as_view(), name='room-players'),
+    path('<str:room_code>/players/<int:player_id>/delete/', RemovePlayerView.as_view(), name='remove_player'), 
+    path('<str:room_code>/check-session/', CheckSessionInRoomView.as_view(), name='check-session'),
+    path('<str:room_code>/start/', StartGameView.as_view(), name='start-game'),
+    path('<str:room_code>/players-count/', PlayersCount.as_view(), name='players-count'),
+    path('<str:room_code>/status/', RoomStatusView.as_view(), name='room-status'),
+    path('<str:room_code>/current-player/', CurrentPlayerView.as_view(), name='current-player'),
+    path('<str:room_code>/players/<int:player_id>/hand/', PlayerHandView.as_view(), name='hand-view'),
+    path('<str:room_code>/players/<int:player_id>/add-hand-card/<int:card_id>/', AddCardToHandView.as_view(), name='add-hand'),
+    path('<str:room_code>/player/status/', PlayerStatusView.as_view(), name='player-status'),
+    path('<str:room_code>/player/status/edit/', EditPlayerStatusView.as_view(), name='edit-player-status'),
+    path('<str:room_code>/player/add-played-card/', AddCardToPlayerPlayedCard.as_view(), name='add-played-card'),
+    path('<str:room_code>/player/played-cards/', PlayedCardView.as_view(), name='view-played-card'),
+    path('<str:room_code>/player/delete-hand-card/', DeleteCardHandView.as_view(), name='delete-hand-card'),
+    path('<str:room_code>/current-player/edit/', EditCurrentPlayerView.as_view(), name='edit-current-player'),
+    path('<str:room_code>/epidemic/', LogicEpidemic.as_view(), name='move-epidemic'),
+    path('<str:room_code>/cure-epidemic/', CureEpidemicView.as_view(), name='cure-epidemic'),
+    path('<str:room_code>/kill-court/', KillCourt.as_view(), name='kill-court'),
+    path('<str:room_code>/move-peasant-card/', MovePeasantCard.as_view(), name='move-peasant-card'),
+    path('<str:room_code>/move-card/', MoveCard.as_view(), name='move-card'),
+    path('<str:room_code>/choise-card-to-move/', ChoiseCardByGroupToMove.as_view(), name='choise-card-to-move'),
+    path('<str:room_code>/swap-cards/', SwapCards.as_view(), name='swap-cards'),
+    path('<str:room_code>/choise-court-kill/', ChoiseCourtKill.as_view(), name='choise-court-kill'),
+    path('<str:room_code>/crusade-points-view/', CrusadePointsView.as_view(), name='crusade-points-view'),
+    path('<str:room_code>/player/crusade-points-view/', PlayerCrusadePointsView.as_view(), name='player-crusade-points-view'),
+    path('<str:room_code>/delete-card-and-get-crusade-points/', DeleteCardAndGetCrusadePoints.as_view(), name='delete-card-and-get-crusade-points'),
+    path('<str:room_code>/count-relics-view/', CountRelicsView.as_view(), name='count-relics-view'),
+    path('<str:room_code>/player/count-relics-view/', PlayerCountRelicsView.as_view(), name='player-count-relics-view'),
+    path('<str:room_code>/steal-crusade-points/', StealCrusadePoints.as_view(), name='steal-crusade-points'),
+    path('<str:room_code>/send-court-crusade/', SendCourtCrusader.as_view(), name='send-court-crusade'),
+    path('<str:room_code>/require-discard-to-settle/', RequireDiscardToSettle.as_view(), name='require-discard-to-settle'),
+    path('<str:room_code>/reset-card/play-require-discard-to-settle/', ResetCardAndPlay.as_view(), name='reset-card-play'),
+    path('<str:room_code>/end-game/check/', EndGameCheck.as_view(), name='check-end-game'),
+    path('<str:room_code>/game/results/', ScoringPointsView.as_view(), name='game-results'),
+
+]

@@ -1,0 +1,27 @@
+#waiting-room{
+    background-image: url('../../public/images/connection-image.png');
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#waiting-room h3{
+    text-align: center;
+}
+
+#waiting-room .info-block{
+    background-color: rgba(3, 3, 3, 0.63);
+    height: auto;
+    width: auto;
+    border-radius: 20px;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

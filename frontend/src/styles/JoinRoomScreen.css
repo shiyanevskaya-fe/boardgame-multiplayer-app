@@ -1,0 +1,53 @@
+#join-room-screen{
+    background-image: url('../../public/images/connection-image.png');
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#join-room-screen h3{
+    text-align: center;
+}
+
+#join-room-screen .info-block{
+    margin: 0 auto;
+    background-color: rgba(3, 3, 3, 0.63);
+    height: 30vh;
+    width: auto;
+    border-radius: 20px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.form-join{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.form-join input{
+    background-color: #9F9F9F;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: clamp(14px, 1.04vw,20px);
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+.hidden-hint{
+    color: #990000;
+    display: none;
+    font-size: clamp(12px, 1vw, 16px);
+}

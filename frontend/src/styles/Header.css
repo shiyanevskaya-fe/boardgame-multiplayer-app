@@ -1,0 +1,100 @@
+#header{
+    position: absolute; 
+    top: 0;
+    left: clamp(5px, 5vw, 104px);
+    right: clamp(5px, 5vw, 104px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: clamp(10px,2vh,24px);
+}
+
+#header img{
+    width: clamp(30px, 7vh,80px);
+    height: auto;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    gap: clamp(12px, 1.8vw, 36px);
+}
+
+/* Стили для кнопки "гамбургер" (открытие мобильного меню) */
+.hamburger {
+    background: none; /* Прозрачный фон */
+    border: none; /* Убрать границу */
+    cursor: pointer;
+}
+
+/* Стили для линий внутри кнопки "гамбургер" */
+.hamburger-lines {
+    display: flex; /* Использование flexbox для расположения линий */
+    flex-direction: column; /* Направление линий в столбец */
+    justify-content: center; /* Выравнивание по центру по вертикали */
+    gap: 5px; /* Расстояние между линиями */
+}
+
+/* Стили для одной линии внутри кнопки "гамбургер" */
+.hamburger-line {
+    width: 35px; /* Ширина линии */
+    height: 3px; /* Высота линии */
+    background-color: #EBEBEB; /* Цвет линии */
+}
+
+/* Стили для мобильного меню */
+.mobile-menu {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0; /* Привязка к верхнему краю */
+    left: 0; /* Привязка к левому краю */
+    width: 100vw; /* Ширина на весь экран */
+    height: 100vh; /* Высота на весь экран */
+    display: flex; /* Использование flexbox для расположения элементов */
+    flex-direction: column; /* Направление элементов в столбец */
+    align-items: center; /* Выравнивание элементов по центру по горизонтали */
+    justify-content: center; /* Выравнивание элементов по центру по вертикали */
+    gap: 25px; /* Расстояние между элементами */
+    background-color: #363636; /* Цвет фона */
+    z-index: 5;
+}
+
+/* Стили для кнопки закрытия мобильного меню */
+.close-mobile-menu {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 15px; /* Отступ сверху */
+    left: 15px; /* Отступ слева */
+    width: 40px; /* Ширина кнопки */
+    height: 40px; /* Высота кнопки */
+    cursor: pointer; /* Изменение курсора при наведении */
+    background: none; /* Прозрачный фон */
+    border: none; /* Убрать границу */
+}
+
+/* Стили для контейнера крестика внутри кнопки закрытия */
+.close-mobile-menu-cross {
+    position: relative; /* Относительное позиционирование */
+    width: 100%; /* Ширина на 100% */
+    height: 100%; /* Высота на 100% */
+}
+
+/* Стили для линий крестика */
+.cross-line {
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; /* Привязка к левому краю */
+    width: 100%; /* Ширина на 100% */
+    height: 3px; /* Высота линии */
+    background-color: #EBEBEB; /* Цвет линии */
+}
+
+/* Стили для первой линии крестика */
+.cross-line:first-child {
+    top: 50%; /* Позиционирование по центру */
+    transform: rotate(45deg) translateY(-50%); /* Поворот на 45 градусов */
+}
+
+/* Стили для второй линии крестика */
+.cross-line:last-child {
+    bottom: 50%; /* Позиционирование по центру */
+    transform: rotate(-45deg) translateY(50%); /* Поворот на -45 градусов */
+}

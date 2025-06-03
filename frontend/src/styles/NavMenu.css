@@ -1,0 +1,18 @@
+.nav-menu{
+    display: flex;
+}
+
+.nav-menu.row{
+    gap: 36px;
+    flex-direction: row;
+}
+
+.nav-menu.column{
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+}
+
+.nav-item{
+    cursor: pointer;
+}

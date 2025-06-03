@@ -1,0 +1,10 @@
+#footer{
+    padding-bottom: 100px;
+}
+
+#footer .wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}

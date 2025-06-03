@@ -1,0 +1,44 @@
+#feedback{
+    background-image: url('../../public/images/feedback_image.png');
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: clamp(50vh, 70vh, 100vh);
+    position: relative;
+}
+
+.feedback-container{
+    background-color: rgba(3, 3, 3, 0.63);
+
+    max-width: 600px;
+    width: 30vw;
+    max-height: 600px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    border-radius: 21px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+    gap: 40px;
+
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+
+@media(max-width: 920px){
+    .feedback-container{
+        width: 50vw;
+    }
+}
+
+@media(max-width: 665px){
+    .feedback-container{
+        width: 80vw;
+    }
+}

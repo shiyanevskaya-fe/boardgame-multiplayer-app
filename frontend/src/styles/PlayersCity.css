@@ -1,0 +1,198 @@
+.players-city{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    height: 100%;
+}
+
+.players-info{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.GameMobile .players-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.about-player{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.GameMobile .about-player{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.names{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 8px;
+}
+
+.hotbed_epidemic{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.hotbed_epidemic img{
+    width: 70px;
+    height: auto;
+}
+
+.GameMobile .names{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 8px;
+}
+
+.GameMobile .hotbed_epidemic img{
+    width: 80px;
+    height: auto;
+}
+
+.player-name,
+.name-city{
+    width: auto;
+    height: fit-content;
+    padding: 6px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 8px;
+    color: black;
+}
+
+.player-name{
+    background-color: #9F9F9F;
+}
+
+.name-city{
+    background-color: #ffffff;
+}
+
+.city-info{
+    background-color: #28292B;
+    height: 261px;
+    display: grid;
+    grid-template-columns: 1fr 4.85fr;
+    grid-template-rows: 1fr;
+}
+
+.GameMobile .city-info{
+    background-color: #28292B;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.epidemic-maps{
+    height: 100%;
+    width: 100%;
+    border-right: 2px solid #050C12;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.epidemic-maps img{
+    max-height: 83px;
+    height: 100%;
+    width: auto;
+}
+
+.GameMobile .epidemic-maps{
+    border-bottom: 2px solid #050C12;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: start;
+}
+
+.maps-residents{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+}
+
+.city-info .courtiers,
+.city-info .priests,
+.city-info .commoners{
+    height: 100%;
+    max-height: 83px;
+    padding: 2px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.GameMobile .city-info .courtiers,
+.GameMobile .city-info .priests,
+.GameMobile .city-info .commoners,
+.GameMobile .epidemic-maps{
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+    height: 100%;
+    max-height: 176.5px;
+    padding: 4px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: start;
+}
+
+.city-info .courtiers img,
+.city-info .priests img,
+.city-info .commoners img,
+.GameMobile .city-info .epidemic-maps img{
+    height: 100%;
+    max-height: none;
+}
+
+.Game .current-player .city-info{
+    background-color: #494b4e;
+    transition: all 0.3s ease-in-out;
+}
+
+.crusade-points-info, 
+.relics-info{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.crusade-info{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+  
+.GameMobile .crusade-info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

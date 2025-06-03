@@ -1,0 +1,151 @@
+#connection-screen{
+    background-image: url('../../public/images/connection-image.png');
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#connection-screen h3{
+    font-size: clamp(14px, 1.04vw,20px);
+}
+
+#connection-screen .info-block{
+    background-color: rgba(3, 3, 3, 0.63);
+    height: 100vh;
+    width: 50vw;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.connection-method{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 46px;
+}
+
+.connection-qr{
+    background-color: white;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.connection-href{
+    width: 35vw;
+    background-color: white;
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
+
+.waiting-room{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+}
+
+.connected-players{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.players-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.player-card{
+    background-color: #9F9F9F;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.player-card:hover{
+    background-color: #818080;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    z-index: 1001;
+}
+
+.modal h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.modal-buttons {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-buttons button:first-child {
+    background-color: #990000;
+    color: white;
+}
+
+.modal-buttons button:last-child {
+    background-color: #ccc;
+    color: black;
+}
+
+.modal-buttons button:hover:first-child {
+    background-color: #6a0000;
+}
+
+.modal-buttons button:hover:last-child {
+    background-color: #b3b3b3;
+}

@@ -1,0 +1,54 @@
+#rules-game{
+    background-color: #303030;
+    border-radius: 12px;
+    border-top-right-radius: 0px;
+    width: 100%;
+    height: max-content;
+}
+
+.nav-rules-game{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 10px;
+}
+
+.nav-rule-game{
+    color: #9d9d9d;
+    background-color: #303030;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.nav-rule-game:hover{
+    transform: scale(1.05);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    color: #EBEBEB; 
+}
+
+.nav-rule-game.active {
+    transform: scale(1.05);
+    color: #EBEBEB;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+@media (max-width: 732px) {
+    #rules-game{
+        border-top-right-radius: 12px;
+    }
+
+    .nav-rules-game{
+        display: none;
+    }
+}
+
+@media(max-width: 501px){
+    #rules-game{
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,76 @@
+#hero-block{
+    background-image: url('../../public/images/hero_image.png');
+    background-size: cover;
+    background-position: center;
+    height: clamp(50vh, 70vh, 100vh);
+    width: 100%;
+    transition: height 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero-block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 150%; 
+    height: 100%;
+    background: url('../../public/images/fog.png') repeat-x;
+    opacity: 0.4;
+    pointer-events: none; 
+    animation: fogMove 20s linear infinite alternate;
+}
+
+@keyframes fogMove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width: 100%;
+    height: 100%;
+}
+
+.title-hero{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.hero-text-description{
+    text-align: start;
+}
+
+.description-hero{
+    width: clamp(80vw, 50vw, 40vw); 
+    max-width: 632px;
+    padding-top: clamp(16px, 4vh,52px);
+    padding-bottom: clamp(18px, 5vh,74px);
+}
+
+@media (min-width: 1720px) {
+    #hero-block {
+        height: 100vh; 
+    }
+}
+
+
+@media(max-width: 850px){
+    #hero-block{
+        height: 50vh;
+    }
+}
+
+@media (max-width: 600px) {
+    #hero-block {
+        height: clamp(40vh, 60vh, 80vh); 
+    }
+}

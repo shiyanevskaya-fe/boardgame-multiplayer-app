@@ -1,0 +1,20 @@
+.button-game{
+    background-color: #EBEBEB;
+    color: #050C12;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: clamp(14px, 1.04vw,20px);
+    cursor: pointer;
+    z-index: 4;
+}
+
+.button-game:hover{
+    background-color: #cecdcd;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
